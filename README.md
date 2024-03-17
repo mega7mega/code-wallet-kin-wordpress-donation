@@ -1,6 +1,6 @@
 Plugin Name: Kin Code Wallet Donation<br>
 Plugin URI: https://github.com/mega7mega/code-wallet-kin-wordpress-donation/<br>
-Description: Adds a Code.com donation button to the end of each post, and makes it slide in when scrolling.<br>
+Description: Adds a Code Wallet (getcode.com) donation button to the end of each post, and makes it slide in when scrolling.<br>
 Version: 1.0<br>
 Author: James Steele<br>
 Author URI: https://www.x.com/ceoduno<br>
