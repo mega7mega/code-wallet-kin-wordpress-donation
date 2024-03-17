@@ -1,0 +1,10 @@
+#button-container {
+    position: fixed;
+    bottom: 20px;
+    right: -300px;
+    transition: right 0.3s ease-in-out;
+}
+
+#button-container.show {
+    right: 20px;
+}
