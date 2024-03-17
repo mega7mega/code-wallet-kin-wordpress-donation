@@ -107,7 +107,7 @@ function kin_code_donation_settings_page_content() {
                 </tr>
                 <tr valign="top">
                     <th scope="row">Custom Text</th>
-                    <td><input type="text" name="kin_code_donation_custom_text" value="<?php echo esc_attr(get_option('kin_code_donation_custom_text', 'Do you like my writing? Donate to my blog with Code Wallet')); ?>" /></td>
+                    <td><input type="text" name="kin_code_donation_custom_text" value="<?php echo esc_attr(get_option('kin_code_donation_custom_text', 'Enjoyed my blog? Show your support by donating via Code Wallet. Every bit helps!')); ?>" /></td>
                 </tr>
                 <tr valign="top">
                     <th scope="row">Custom CSS</th>
