@@ -99,15 +99,15 @@ function kin_code_donation_settings_page_content() {
             <table class="form-table">
                 <tr valign="top">
                     <th scope="row">Amount (Maximum 1.00)</th>
-                    <td>$<input type="text" name="kin_code_donation_amount" value="<?php echo esc_attr(get_option('kin_code_donation_amount', '0.05')); ?>" /></td>
+                    <td>$<input type="text" name="kin_code_donation_amount" value="<?php echo esc_attr(get_option('kin_code_donation_amount', '0.05')); ?>" size=5/></td>
                 </tr>
                 <tr valign="top">
-                    <th scope="row">Destination (Code Wallet Deposit Address) getcode.com</th>
-                    <td><input type="text" name="kin_code_donation_destination" value="<?php echo esc_attr(get_option('kin_code_donation_destination')); ?>" /></td>
+                    <th scope="row">Destination (Code Wallet Deposit Address) <a href="https://www.getcode.com/" target=getcode>getcode.com</a></th>
+                    <td><input type="text" name="kin_code_donation_destination" value="<?php echo esc_attr(get_option('kin_code_donation_destination')); ?>" size=100/></td>
                 </tr>
                 <tr valign="top">
                     <th scope="row">Custom Text for support</th>
-                    <td><input type="text" name="kin_code_donation_custom_text" value="<?php echo esc_attr(get_option('kin_code_donation_custom_text', 'Enjoyed my blog? Show your support by donating via Code Wallet. Every bit helps!')); ?>" /></td>
+                    <td><input type="text" name="kin_code_donation_custom_text" value="<?php echo esc_attr(get_option('kin_code_donation_custom_text', 'Enjoyed my blog? Show your support by donating via Code Wallet. Every bit helps!')); ?>"  size=100/></td>
                 </tr>
                 <tr valign="top">
                     <th scope="row">Custom CSS</th>
