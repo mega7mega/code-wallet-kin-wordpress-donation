@@ -6,6 +6,8 @@ Description: Adds a Code.com donation button to the end of each post, and makes 
 Version: 1.0
 Author: James Steele
 Author URI: https://www.x.com/ceoduno
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 function kin_code_donation_enqueue_scripts() {
