@@ -63,7 +63,7 @@ function kin_code_donation_settings_init() {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for depth */
 }
 #kin-code-donation-container p {
-    margin: 0px 0px 8px 0px !important; /* Adjusts the margin for the paragraph */
+    margin: 0px 0px 12px 0px !important; /* Adjusts the margin for the paragraph */
 }
 ";
         add_option('kin_code_donation_custom_css', $default_css);
