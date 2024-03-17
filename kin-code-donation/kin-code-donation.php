@@ -6,8 +6,8 @@ Description: Adds a Code.com donation button to the end of each post, and makes 
 Version: 1.0
 Author: James Steele
 Author URI: https://www.x.com/ceoduno
-License: MIT
-License URI: https://opensource.org/licenses/MIT
+License: The Unlicense
+License URI: https://unlicense.org/
 */
 
 function kin_code_donation_enqueue_scripts() {
