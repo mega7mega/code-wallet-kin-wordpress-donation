@@ -16,3 +16,4 @@ adds a donate to blog button for code wallet after each blog post <br>
 3. from dashboard "settings" > "kin code donation" to set your amount, destination & custom text
 
 v1.1: Custom CSS
+example: https://jempire.org/wordpress-plugin-for-code-wallet-and-kin-cryptocurrency/
