@@ -1,11 +1,11 @@
 <?php
 /*
-Plugin Name: Kin Code Donation
-Plugin URI: https://example.com/kin-code-donation
+Plugin Name: Kin Code Wallet Donation
+Plugin URI: https://github.com/mega7mega/code-wallet-kin-wordpress-donation/
 Description: Adds a Code.com donation button to the end of each post, and makes it slide in when scrolling.
 Version: 1.0
-Author: Your Name
-Author URI: https://example.com
+Author: James Steele
+Author URI: https://www.x.com/ceoduno
 */
 
 function kin_code_donation_enqueue_scripts() {
