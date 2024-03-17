@@ -1,14 +1,12 @@
-/*
-Plugin Name: Kin Code Wallet Donation
-Plugin URI: https://github.com/mega7mega/code-wallet-kin-wordpress-donation/
-Description: Adds a Code.com donation button to the end of each post, and makes it slide in when scrolling.
-Version: 1.0
-Author: James Steele
-Author URI: https://www.x.com/ceoduno
-License: The Unlicense
-License URI: https://unlicense.org/
-*/
-
+Plugin Name: Kin Code Wallet Donation<br>
+Plugin URI: https://github.com/mega7mega/code-wallet-kin-wordpress-donation/<br>
+Description: Adds a Code.com donation button to the end of each post, and makes it slide in when scrolling.<br>
+Version: 1.0<br>
+Author: James Steele<br>
+Author URI: https://www.x.com/ceoduno<br>
+License: The Unlicense<br>
+License URI: https://unlicense.org/<br>
+<br>
 <b>code wallet & kin cryptocurrency wordpress plugin</b><br>
 adds a donate to blog button for code wallet after each blog post <br>
  <br>
