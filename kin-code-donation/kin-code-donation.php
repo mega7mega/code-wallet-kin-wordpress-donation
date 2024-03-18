@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Kin Code Wallet Donation
  * Plugin URI: https://github.com/mega7mega/code-wallet-kin-wordpress-donation/
- * Description: Adds a Code.com donation button to the end of each post, and makes it slide in when scrolling.
+ * Description: Adds code wallet donation button and social media sharing buttons
  * Version: 1.2
  * Author: James Steele
  * Author URI: https://www.x.com/ceoduno
@@ -21,18 +21,18 @@ function kin_code_donation_add_button($content) {
         global $post;
         $amount = get_option('kin_code_donation_amount', '0.05');
         $destination = get_option('kin_code_donation_destination', 'E8otxw1CVX9bfyddKu3ZB3BVLa4VVF9J7CTPdnUwT9jR');
-        $customText = esc_js(get_option('kin_code_donation_custom_text', '&#10084; Do you like my writing? Support me with Code Wallet &#10084;'));
+        $customText = esc_js(get_option('kin_code_donation_custom_text', '&#10084; Do you like my content? Support me with Code Wallet. Every bit helps! &#10084;'));
         $customCss = get_option('kin_code_donation_custom_css', '');
         $currentUrl = urlencode(get_permalink($post->ID));
         $currentTitle = urlencode(get_the_title($post->ID));
-		$currentTitle2 = urlencode(get_the_title($post->ID)." $kin");
+		$currentTitle2 = urlencode(get_the_title($post->ID)."");
 		$ouid = uniqid();
 		
         $button_code = <<<EOT
 <div id="kin-code-donation-container">
     <p>$customText</p>
     <div id="button-container2"></div>
-    <div class="kin-code-share-buttons">Share: 
+    <div class="kin-code-share-buttons">Share:<br> 
         <a href="https://api.whatsapp.com/send?text=$currentTitle $currentUrl" class="share-button whatsapp-share-button" target={ouid}>WhatsApp</a>
         <a href="https://t.me/share/url?url=$currentUrl&text=$currentTitle" class="share-button telegram-share-button" target={ouid}>Telegram</a>
         <a href="https://www.facebook.com/sharer/sharer.php?u=$currentUrl" class="share-button facebook-share-button" target={ouid}>Facebook</a>
