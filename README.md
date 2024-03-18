@@ -1,7 +1,7 @@
 Plugin Name: Kin Code Wallet Donation<br>
 Plugin URI: https://github.com/mega7mega/code-wallet-kin-wordpress-donation/<br>
 Description: Adds a Code Wallet (getcode.com) donation button to the end of each post, and makes it slide in when scrolling.<br>
-Version: 1.1<br>
+Version: 1.2<br>
 Author: James Steele<br>
 Author URI: https://www.x.com/ceoduno<br>
 License: The Unlicense<br>
@@ -15,5 +15,6 @@ adds a donate to blog button for code wallet after each blog post <br>
 2. activate plugin in wordpress dashboard under "plugins"
 3. from dashboard "settings" > "kin code donation" to set your amount, destination & custom text
 
+v1.2: includes share button and changed default css
 v1.1: Custom CSS
 example: https://jempire.org/wordpress-plugin-for-code-wallet-and-kin-cryptocurrency/
