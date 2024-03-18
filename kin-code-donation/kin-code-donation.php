@@ -18,15 +18,26 @@ add_action('wp_enqueue_scripts', 'kin_code_donation_enqueue_scripts');
 
 function kin_code_donation_add_button($content) {
     if (is_single() && is_main_query()) {
+        global $post;
         $amount = get_option('kin_code_donation_amount', '0.05');
         $destination = get_option('kin_code_donation_destination', 'E8otxw1CVX9bfyddKu3ZB3BVLa4VVF9J7CTPdnUwT9jR');
         $customText = esc_js(get_option('kin_code_donation_custom_text', 'Do you like my writing? Donate to my blog with Code Wallet'));
         $customCss = get_option('kin_code_donation_custom_css', '');
-
+        $currentUrl = urlencode(get_permalink($post->ID));
+        $currentTitle = urlencode(get_the_title($post->ID));
+		$currentTitle2 = urlencode(get_the_title($post->ID)." $kin");
+		$ouid = uniqid();
+		
         $button_code = <<<EOT
 <div id="kin-code-donation-container">
     <p>$customText</p>
-	<div id="button-container2"></div>
+    <div id="button-container2"></div>
+    <div class="kin-code-share-buttons">Share: 
+        <a href="https://api.whatsapp.com/send?text=$currentTitle $currentUrl" class="share-button whatsapp-share-button" target={ouid}>WhatsApp</a>
+        <a href="https://t.me/share/url?url=$currentUrl&text=$currentTitle" class="share-button telegram-share-button" target={ouid}>Telegram</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=$currentUrl" class="share-button facebook-share-button" target={ouid}>Facebook</a>
+        <a href="https://twitter.com/intent/tweet?url=$currentUrl&text=$currentTitle2+@getcode+&hashtags=solana" class="share-button twitter-share-button" target={ouid}>Twitter/X</a>
+    </div>
 </div>
 <script type="module">
     import code from 'https://js.getcode.com/v1';
@@ -41,11 +52,14 @@ function kin_code_donation_add_button($content) {
     button.mount('#button-container2');
 </script>
 EOT;
+
         $customCssOutput = $customCss ? "<style>{$customCss}</style>" : '';
         $content .= $customCssOutput . $button_code;
     }
     return $content;
 }
+
+
 add_filter('the_content', 'kin_code_donation_add_button');
 
 function kin_code_donation_settings_init() {
@@ -65,8 +79,23 @@ function kin_code_donation_settings_init() {
 #kin-code-donation-container p {
     margin: 0px 0px 12px 0px !important; /* Adjusts the margin for the paragraph */
 }
+
+#kin-code-donation-container .share-button {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+#kin-code-donation-container .whatsapp-share-button { }
+#kin-code-donation-container .telegram-share-button {  }
+#kin-code-donation-container .facebook-share-button {  }
+#kin-code-donation-container .twitter-share-button { }
 ";
         add_option('kin_code_donation_custom_css', $default_css);
+		
     }
 
     register_setting('kin_code_donation_settings', 'kin_code_donation_amount');
