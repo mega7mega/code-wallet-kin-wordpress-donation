@@ -3,7 +3,7 @@
  * Plugin Name: Kin Code Wallet Donation
  * Plugin URI: https://github.com/mega7mega/code-wallet-kin-wordpress-donation/
  * Description: Adds a Code.com donation button to the end of each post, and makes it slide in when scrolling.
- * Version: 1.1
+ * Version: 1.2
  * Author: James Steele
  * Author URI: https://www.x.com/ceoduno
  * License: The Unlicense
@@ -21,7 +21,7 @@ function kin_code_donation_add_button($content) {
         global $post;
         $amount = get_option('kin_code_donation_amount', '0.05');
         $destination = get_option('kin_code_donation_destination', 'E8otxw1CVX9bfyddKu3ZB3BVLa4VVF9J7CTPdnUwT9jR');
-        $customText = esc_js(get_option('kin_code_donation_custom_text', 'Do you like my writing? Donate to my blog with Code Wallet'));
+        $customText = esc_js(get_option('kin_code_donation_custom_text', '&#10084; Do you like my writing? Support me with Code Wallet &#10084;'));
         $customCss = get_option('kin_code_donation_custom_css', '');
         $currentUrl = urlencode(get_permalink($post->ID));
         $currentTitle = urlencode(get_the_title($post->ID));
@@ -70,7 +70,7 @@ function kin_code_donation_settings_init() {
     padding: 15px;
     border: 1px solid #0073aa; /* Border color */
     border-radius: 10px; /* Rounded corners */
-    background: linear-gradient(145deg, #6db9ef, #7ce08a); /* Gradient background */
+     background: linear-gradient(145deg, #3da9af, #3ca03a); /* Gradient background */
     color: #ffffff; /* Text color */
     text-align: center;
     margin-top: 20px;
@@ -82,17 +82,19 @@ function kin_code_donation_settings_init() {
 
 #kin-code-donation-container .share-button {
     display: inline-block;
-    margin: 5px;
+    margin: 10px 0px 0px 0px;
     padding: 10px 15px;
     color: #fff;
-    background-color: #007bff;
+    background-color: rgb(20,20,20,.2);
     border-radius: 5px;
     text-decoration: none;
+    font-size:12px;
 }
-#kin-code-donation-container .whatsapp-share-button { }
-#kin-code-donation-container .telegram-share-button {  }
-#kin-code-donation-container .facebook-share-button {  }
-#kin-code-donation-container .twitter-share-button { }
+
+#kin-code-donation-container .whatsapp-share-button { color:#F0F000; }
+#kin-code-donation-container .telegram-share-button {  color:#F0F000;  }
+#kin-code-donation-container .facebook-share-button { color:#F0F000;  }
+#kin-code-donation-container .twitter-share-button { color:#F0F000;   }
 ";
         add_option('kin_code_donation_custom_css', $default_css);
 		
